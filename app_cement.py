@@ -180,9 +180,9 @@ with tab_train:
                 
                     if st.button("Run Baselines"):
                         ests = {
-                            'RF': RandomForestRegressor(random_state=42),
-                            'XGB': XGBRegressor(objective='reg:squarederror', random_state=42),
-                            'GB': GradientBoostingRegressor(random_state=42),
+                            # 'RF': RandomForestRegressor(random_state=42),
+                            # 'XGB': XGBRegressor(objective='reg:squarederror', random_state=42),
+                            #'GB': GradientBoostingRegressor(random_state=42),
                             'LR': LinearRegression(),
                             'SVR': SVR()
                         }
