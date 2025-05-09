@@ -191,10 +191,10 @@ with tab_train:
                                             Dense(64,'relu'),Dropout(0.2),Dense(64,'relu'),Dropout(0.2),Dense(1)])
                             m.compile('adam','mse')
                             return m
-                        ests['NN'] = KerasRegressor(build_fn=build_nn, epochs=150, batch_size=32,
-                                                    validation_split=0.2,
-                                                    callbacks=[tf.keras.callbacks.EarlyStopping(patience=5)],
-                                                    verbose=0)
+                        # ests['NN'] = KerasRegressor(build_fn=build_nn, epochs=150, batch_size=32,
+                        #                             validation_split=0.2,
+                        #                             callbacks=[tf.keras.callbacks.EarlyStopping(patience=5)],
+                        #                             verbose=0)
                         metrics = {}
                         for name, est in ests.items():
                             m, ms, r, rs = repeated_cv(est, X_train_s, y_train)
